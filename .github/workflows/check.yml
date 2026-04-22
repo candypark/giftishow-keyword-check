@@ -1,4 +1,4 @@
-- name: Run script
+name: Run script
         env:
           GIFTISHOW_COOKIE: ${{ secrets.GIFTISHOW_COOKIE }}
         run: python check_coupon.py
