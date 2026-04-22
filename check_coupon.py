@@ -20,7 +20,8 @@ with open("keywords.txt", "r", encoding="utf-8") as f:
 test_payload = {"start": "1", "size": "20", "searchWord": keywords[0], "lineUp": "popular"}
 test_resp = requests.post(url, json=test_payload, headers=headers, timeout=10)
 print("=== 응답 구조 확인 (첫 번째 키워드) ===")
-print(json.dumps(test_resp.json(), ensure_ascii=False, indent=2)[:2000])
+print("상태코드:", test_resp.status_code)
+print("응답 원문:", test_resp.text[:500])
 
 # 전체 키워드 처리
 wb = openpyxl.Workbook()
