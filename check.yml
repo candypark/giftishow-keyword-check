@@ -1,0 +1,27 @@
+name: Check Giftishow Keywords
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests openpyxl
+
+      - name: Run script
+        run: python check_coupon.py
+
+      - name: Upload result
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyword-result
+          path: result.xlsx
