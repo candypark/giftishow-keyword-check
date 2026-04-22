@@ -9,7 +9,7 @@ headers = {
     "Content-Type": "application/json",
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
     "Origin": "https://biz.giftishow.com",
-    "Referer": "https://biz.giftishow.com/search?searchWord=커피",
+    "Referer": "https://biz.giftishow.com/search?searchWord=%EC%BB%A4%ED%94%BC",
     "cookie": os.environ.get("GIFTISHOW_COOKIE", "")
 }
 
