@@ -12,4 +12,5 @@ payload = {
 }
 
 resp = requests.post(url, json=payload, headers=headers, timeout=10)
+print("상태코드:", resp.status_code)
 print(json.dumps(resp.json(), ensure_ascii=False, indent=2))
